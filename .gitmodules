@@ -1,0 +1,4 @@
+[submodule "external/Reloaded.Memory.SigScan"]
+	path = external/Reloaded.Memory.SigScan
+	url = https://github.com/TGEnigma/Reloaded.Memory.SigScan
+    branch = arbitrary-ranges

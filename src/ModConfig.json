@@ -1,0 +1,11 @@
+{
+  "ModId": "rpcs3.test",
+  "ModName": "rpcs3.test",
+  "ModAuthor": "TGE",
+  "ModVersion": "1.0.0",
+  "ModDescription": "Template for a Reloaded Mod Configuration",
+  "ModDll": "ReloadedRPCS3TestsNoConfig.dll",
+  "ModIcon": "Preview.png",
+  "ModDependencies": [],
+  "SupportedAppId": []
+}

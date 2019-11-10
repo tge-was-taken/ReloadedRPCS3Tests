@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>D:\Modding\Tools\Reloaded\Mods\rpcs3.test\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ModConfig.json" />
+    <None Remove="Preview.png" />
+    <None Remove="TODO.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ModConfig.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TODO.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Reloaded.Assembler" Version="1.0.7" />
+    <PackageReference Include="Reloaded.Hooks" Version="2.3.0" />
+    <PackageReference Include="Reloaded.Hooks.Definitions" Version="1.3.0" />
+    <PackageReference Include="Reloaded.Memory" Version="2.5.0" />
+    <PackageReference Include="Reloaded.Memory.Buffers" Version="1.3.3" />
+    <PackageReference Include="Reloaded.Mod.Interfaces" Version="1.5.0" />
+    <PackageReference Include="Reloaded.SharedLib.Hooks" Version="1.2.0" />
+    <PackageReference Include="Vanara.PInvoke.Kernel32" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <NativeLibs Remove="OutOfVirtualMemoryException.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <NativeLibs Remove="RPCS3VirtualMemory.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <NativeLibs Remove="PPUThreadContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <NativeLibs Remove="EmulatorHooks.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <NativeLibs Remove="TODO.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <NativeLibs Remove="MemoryHelper.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <NativeLibs Remove="ConsoleLogger.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\external\Reloaded.Memory.SigScan\Reloaded.Memory.Sigscan\Reloaded.Memory.Sigscan.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,3 @@
+﻿- Think of a game hooks interface that responds to emulator events (init, start, pause, stop, etc.)
+- Maybe queue sigscans and process them all at once for each page
+- Provide hooking/calling capabilities for lv2 syscalls and modules
